@@ -1,9 +1,5 @@
-Depot::Application.routes.draw do
-  resources :carts
-
-  get "store/index"
-  resources :products
-
+Blog::Application.routes.draw do
+  get "welcome/index"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
@@ -59,6 +55,6 @@ Depot::Application.routes.draw do
   #     resources :products
   #   end
 
-  root 'store#index', as: 'store'
-
+  resources :posts
+  root to:'welcome#index'
 end
